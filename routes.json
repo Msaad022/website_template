@@ -1,0 +1,13 @@
+{
+    "/products/": "/products",
+    "/productsPagination/": "/productsPagination",
+    "/products/:id": "/product/:id",
+    "/products/{1,2,3,5}/related": "/related",
+    "/products/4/related": "/relatedLast",
+    "/wishlist/:id": "/wishlist",
+    "/wishlistPagination/1": "/wishlist",
+    "/wishlistPagination/2": "/wishlistPagination",
+    "/cart/:id": "/cart",
+    "/cartPagination/1": "/cart",
+    "/cartPagination/2": "/cartPagination"
+}

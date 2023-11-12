@@ -1,0 +1,41 @@
+@font-face {
+  src:url('./assets/fonts/Tajawal-Bold.ttf');
+  font-family: 'Tajawal-Bold'
+}
+@font-face {
+  src:url('./assets/fonts/Tajawal-Medium.ttf');
+  font-family: 'Tajawal-Medium'
+}
+
+.pagination-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.pagination-swiper {
+  max-width: 204px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+.nothing{
+  font-size: 20px;
+  padding: 15px;
+  color: rgb(147, 147, 147);
+}
+.startRating {
+  position: relative;
+}
+.ratingGold::before {
+  color: #ffb607;
+}
+.startRating::after {
+  content: "\ee0a";
+  width: 8px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  color: #ffb607;
+}
