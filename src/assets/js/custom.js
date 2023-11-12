@@ -1,6 +1,6 @@
 export const jqueryHandlerCustom = {
-  function() {
-    (function ($) {
+  function(jQuery) {
+    return function ($) {
       "use strict";
       jQuery('.mean-menu').meanmenu({ 
         meanScreenWidth: "991"
@@ -41,6 +41,6 @@ export const jqueryHandlerCustom = {
           // Removes Active Class From Other Titles
           $(".accordion-title").not($(this)).removeClass("active");
         });
-    })(jQuery);
+    }
   },
 };
