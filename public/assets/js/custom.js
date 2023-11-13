@@ -2,9 +2,9 @@ export const jqueryHandlerCustom = {
   function() {
     (function ($) {
       "use strict";
-      // jQuery('.mean-menu').meanmenu({ 
-      //   meanScreenWidth: "991"
-      // });
+      jQuery('.mean-menu').meanmenu({ 
+        meanScreenWidth: "991"
+      });
       // Header Sticky, Go To Top JS
       $(window).on("scroll", function () {
         // Header Sticky JS
