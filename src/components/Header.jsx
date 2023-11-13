@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -81,30 +81,30 @@ const Header = () => {
                 <div className="collapse navbar-collapse mean-menu">
                   <ul className="navbar-nav m-auto">
                     <li className="nav-item">
-                      <NavLink to="/" className="nav-link">
+                      <Link to="/" className="nav-link">
                         Products
-                      </NavLink>
+                      </Link>
                     </li>
 
                     <li className="nav-item">
-                      <NavLink to="/products/1" className="nav-link">
+                      <Link to="/products/1" className="nav-link">
                         ProductDetails
-                      </NavLink>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/shoppingCart" className="nav-link">
+                      <Link to="/shoppingCart" className="nav-link">
                         ShoppingCart
-                      </NavLink>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/wishlist" className="nav-link">
+                      <Link to="/wishlist" className="nav-link">
                         Wishlist
-                      </NavLink>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/checkout" className="nav-link">
+                      <Link to="/checkout" className="nav-link">
                         Checkout
-                      </NavLink>
+                      </Link>
                     </li>
                   </ul>
 
