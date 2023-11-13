@@ -87,22 +87,22 @@ const Header = () => {
                     </li>
 
                     <li className="nav-item">
-                      <NavLink to="#/products/1" className="nav-link">
+                      <NavLink to="/products/1" className="nav-link">
                         ProductDetails
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="#/shoppingCart" className="nav-link">
+                      <NavLink to="/shoppingCart" className="nav-link">
                         ShoppingCart
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="#/wishlist" className="nav-link">
+                      <NavLink to="/wishlist" className="nav-link">
                         Wishlist
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="#/checkout" className="nav-link">
+                      <NavLink to="/checkout" className="nav-link">
                         Checkout
                       </NavLink>
                     </li>

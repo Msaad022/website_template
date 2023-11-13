@@ -50,7 +50,7 @@ const ProductsItems = ({products ,productHandler ,addCart ,addWishList }) => {
                 </ul>
               </div>
 
-              <Link to={`/#products/${item.id}`}>
+              <Link to={`/products/${item.id}`}>
                 <h3>{item.name}</h3>
               </Link>
               <ul className="ratingStars">
