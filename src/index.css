@@ -1,9 +1,9 @@
 @font-face {
-  src:url('../../public/assets/fonts/Tajawal-Bold.ttf');
+  src:url('../public/assets/fonts/Tajawal-Bold.ttf');
   font-family: 'Tajawal-Bold'
 }
 @font-face {
-  src:url('../../public/assets/fonts/Tajawal-Medium.ttf');
+  src:url('../public/assets/fonts/Tajawal-Medium.ttf');
   font-family: 'Tajawal-Medium'
 }
 
