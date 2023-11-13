@@ -1,6 +1,11 @@
-  import {Link, Outlet,NavLink } from "react-router-dom";
+  import { Outlet,NavLink } from "react-router-dom";
+  import { jqueryHandlerCustom } from "../assets";
+import { useEffect } from "react";
 
 const Header = () => {
+    useEffect(() => {
+        jqueryHandlerCustom.function();
+      }, []);
   return (
     <>
 <header className="header-area">
