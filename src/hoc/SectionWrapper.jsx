@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 import { jqueryHandlerCustom } from "../assets";
-import {Footer} from '../components'
+import { Footer } from "../components";
 const StarWrapper = (Component) =>
-
   function HOC() {
-    
     useEffect(() => {
       jqueryHandlerCustom.function();
     }, []);
@@ -18,7 +16,7 @@ const StarWrapper = (Component) =>
           <i className="bx bx-chevrons-up"></i>
           <i className="bx bx-chevrons-up"></i>
         </div>
-        <Footer/>
+        <Footer />
         {/* <!-- End Go Top Area --> */}
       </>
     );
