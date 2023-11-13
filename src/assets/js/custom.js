@@ -6,9 +6,6 @@ export const jqueryHandlerCustom = {
       $(window).on("scroll", function () {
         // Header Sticky JS
         if ($(this).scrollTop() > 150) {
-          jQuery('.mean-menu').meanmenu({ 
-            meanScreenWidth: "991"
-          });
           $(".navbar-area").addClass("is-sticky");
         } else {
           $(".navbar-area").removeClass("is-sticky");

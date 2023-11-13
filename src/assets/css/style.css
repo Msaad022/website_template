@@ -651,9 +651,9 @@ Nav Area Style
   transition: all ease 0.5s;
   margin-left: 0;
   margin-right: 0;
-  padding: 35px 0;
   position: relative;
   margin: 0 15px;
+  text-align: center;
 }
 
 .navbar-area .desktop-nav .navbar .navbar-nav .nav-item a i {

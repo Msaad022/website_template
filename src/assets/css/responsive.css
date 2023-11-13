@@ -1549,9 +1549,9 @@
     padding-top: 65px;
     padding-bottom: 5px;
   }
-  .mobile-nav {
+  /* .mobile-nav {
     display: block;
-  }
+  } */
   .mobile-nav .logo {
     position: relative;
     width: 60%;
@@ -1586,9 +1586,9 @@
   .mobile-nav .mobile-menu.mean-container a.meanmenu-reveal span {
     background: #1b1b1b;
   }
-  .desktop-nav {
+  /* .desktop-nav {
     display: none;
-  }
+  } */
   .others-option {
     display: none;
   }

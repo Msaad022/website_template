@@ -78,7 +78,7 @@ const Header = () => {
                   />
                 </a>
 
-                <div className="collapse navbar-collapse mean-menu">
+                <div className="navbar-collapse mean-menu">
                   <ul className="navbar-nav m-auto">
                     <li className="nav-item">
                       <NavLink to="/" className="nav-link">
