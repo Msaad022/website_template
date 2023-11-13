@@ -7,11 +7,11 @@
           "id": 1,
           "name": "Pitahaya Dragon",
           "images": [
-            "../src/assets/images/product/product-1.jpg",
-            "../src/assets/images/product/product-2.jpg",
-            "../src/assets/images/product/product-3.jpg",
-            "../src/assets/images/product/product-4.jpg",
-            "../src/assets/images/product/product-5.jpg"
+            "../assets/images/product/product-1.jpg",
+            "../assets/images/product/product-2.jpg",
+            "../assets/images/product/product-3.jpg",
+            "../assets/images/product/product-4.jpg",
+            "../assets/images/product/product-5.jpg"
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
           "original_price": 110,
@@ -47,11 +47,11 @@
           "id": 2,
           "name": "Corn",
           "images": [
-            "../src/assets/images/product/product-2.jpg",
-            "../src/assets/images/product/product-5.jpg",
-            "../src/assets/images/product/product-6.jpg",
-            "../src/assets/images/product/product-7.jpg",
-            "../src/assets/images/product/product-8.jpg"
+            "../assets/images/product/product-2.jpg",
+            "../assets/images/product/product-5.jpg",
+            "../assets/images/product/product-6.jpg",
+            "../assets/images/product/product-7.jpg",
+            "../assets/images/product/product-8.jpg"
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
           "original_price": 6,
@@ -87,11 +87,11 @@
           "id": 3,
           "name": "Cabbage",
           "images": [
-            "../src/assets/images/product/product-3.jpg",
-            "../src/assets/images/product/product-8.jpg",
-            "../src/assets/images/product/product-9.jpg",
-            "../src/assets/images/product/product-1.jpg",
-            "../src/assets/images/product/product-2.jpg"
+            "../assets/images/product/product-3.jpg",
+            "../assets/images/product/product-8.jpg",
+            "../assets/images/product/product-9.jpg",
+            "../assets/images/product/product-1.jpg",
+            "../assets/images/product/product-2.jpg"
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
           "original_price": 11,
@@ -144,11 +144,11 @@
           "id": 4,
           "name": "Blackberries",
           "images": [
-            "../src/assets/images/product/product-4.jpg",
-            "../src/assets/images/product/product-5.jpg",
-            "../src/assets/images/product/product-6.jpg",
-            "../src/assets/images/product/product-7.jpg",
-            "../src/assets/images/product/product-8.jpg"
+            "../assets/images/product/product-4.jpg",
+            "../assets/images/product/product-5.jpg",
+            "../assets/images/product/product-6.jpg",
+            "../assets/images/product/product-7.jpg",
+            "../assets/images/product/product-8.jpg"
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
           "original_price": 10,
@@ -184,11 +184,11 @@
           "id": 5,
           "name": "Raspberries",
           "images": [
-            "../src/assets/images/product/product-5.jpg",
-            "../src/assets/images/product/product-8.jpg",
-            "../src/assets/images/product/product-9.jpg",
-            "../src/assets/images/product/product-1.jpg",
-            "../src/assets/images/product/product-2.jpg"
+            "../assets/images/product/product-5.jpg",
+            "../assets/images/product/product-8.jpg",
+            "../assets/images/product/product-9.jpg",
+            "../assets/images/product/product-1.jpg",
+            "../assets/images/product/product-2.jpg"
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
           "original_price": 20,
@@ -238,11 +238,11 @@
       "id": 1,
       "name": "Pitahaya Dragon",
       "images": [
-        "../src/assets/images/product/product-1.jpg",
-        "../src/assets/images/product/product-2.jpg",
-        "../src/assets/images/product/product-3.jpg",
-        "../src/assets/images/product/product-4.jpg",
-        "../src/assets/images/product/product-5.jpg"
+        "../assets/images/product/product-1.jpg",
+        "../assets/images/product/product-2.jpg",
+        "../assets/images/product/product-3.jpg",
+        "../assets/images/product/product-4.jpg",
+        "../assets/images/product/product-5.jpg"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
       "original_price": 110,
@@ -278,11 +278,11 @@
       "id": 2,
       "name": "Corn",
       "images": [
-        "../src/assets/images/product/product-2.jpg",
-        "../src/assets/images/product/product-5.jpg",
-        "../src/assets/images/product/product-6.jpg",
-        "../src/assets/images/product/product-7.jpg",
-        "../src/assets/images/product/product-8.jpg"
+        "../assets/images/product/product-2.jpg",
+        "../assets/images/product/product-5.jpg",
+        "../assets/images/product/product-6.jpg",
+        "../assets/images/product/product-7.jpg",
+        "../assets/images/product/product-8.jpg"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
       "original_price": 6,
@@ -318,11 +318,11 @@
       "id": 3,
       "name": "Cabbage",
       "images": [
-        "../src/assets/images/product/product-3.jpg",
-        "../src/assets/images/product/product-8.jpg",
-        "../src/assets/images/product/product-9.jpg",
-        "../src/assets/images/product/product-1.jpg",
-        "../src/assets/images/product/product-2.jpg"
+        "../assets/images/product/product-3.jpg",
+        "../assets/images/product/product-8.jpg",
+        "../assets/images/product/product-9.jpg",
+        "../assets/images/product/product-1.jpg",
+        "../assets/images/product/product-2.jpg"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
       "original_price": 11,
@@ -358,11 +358,11 @@
       "id": 4,
       "name": "Blackberries",
       "images": [
-        "../src/assets/images/product/product-4.jpg",
-        "../src/assets/images/product/product-5.jpg",
-        "../src/assets/images/product/product-6.jpg",
-        "../src/assets/images/product/product-7.jpg",
-        "../src/assets/images/product/product-8.jpg"
+        "../assets/images/product/product-4.jpg",
+        "../assets/images/product/product-5.jpg",
+        "../assets/images/product/product-6.jpg",
+        "../assets/images/product/product-7.jpg",
+        "../assets/images/product/product-8.jpg"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
       "original_price": 10,
@@ -398,11 +398,11 @@
       "id": 5,
       "name": "Raspberries",
       "images": [
-        "../src/assets/images/product/product-5.jpg",
-        "../src/assets/images/product/product-8.jpg",
-        "../src/assets/images/product/product-9.jpg",
-        "../src/assets/images/product/product-1.jpg",
-        "../src/assets/images/product/product-2.jpg"
+        "../assets/images/product/product-5.jpg",
+        "../assets/images/product/product-8.jpg",
+        "../assets/images/product/product-9.jpg",
+        "../assets/images/product/product-1.jpg",
+        "../assets/images/product/product-2.jpg"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
       "original_price": 20,
@@ -442,11 +442,11 @@
         "id": 4,
         "name": "Blackberries",
         "images": [
-          "../src/assets/images/product/product-4.jpg",
-          "../src/assets/images/product/product-5.jpg",
-          "../src/assets/images/product/product-6.jpg",
-          "../src/assets/images/product/product-7.jpg",
-          "../src/assets/images/product/product-8.jpg"
+          "../assets/images/product/product-4.jpg",
+          "../assets/images/product/product-5.jpg",
+          "../assets/images/product/product-6.jpg",
+          "../assets/images/product/product-7.jpg",
+          "../assets/images/product/product-8.jpg"
         ],
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
         "original_price": 10,
@@ -482,11 +482,11 @@
         "id": 5,
         "name": "Raspberries",
         "images": [
-          "../src/assets/images/product/product-7.jpg",
-          "../src/assets/images/product/product-8.jpg",
-          "../src/assets/images/product/product-9.jpg",
-          "../src/assets/images/product/product-1.jpg",
-          "../src/assets/images/product/product-2.jpg"
+          "../assets/images/product/product-7.jpg",
+          "../assets/images/product/product-8.jpg",
+          "../assets/images/product/product-9.jpg",
+          "../assets/images/product/product-1.jpg",
+          "../assets/images/product/product-2.jpg"
         ],
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
         "original_price": 20,
@@ -529,11 +529,11 @@
           "id": 1,
           "name": "Pitahaya Dragon",
           "images": [
-            "../src/assets/images/product/product-6.jpg",
-            "../src/assets/images/product/product-2.jpg",
-            "../src/assets/images/product/product-3.jpg",
-            "../src/assets/images/product/product-4.jpg",
-            "../src/assets/images/product/product-5.jpg"
+            "../assets/images/product/product-6.jpg",
+            "../assets/images/product/product-2.jpg",
+            "../assets/images/product/product-3.jpg",
+            "../assets/images/product/product-4.jpg",
+            "../assets/images/product/product-5.jpg"
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus",
           "original_price": 110,
@@ -578,7 +578,7 @@
           "product_id": 1,
           "name": "Pitahaya Dragon",
           "in_stock": "In stock",
-          "image": "../src/assets/images/product/product-1.jpg",
+          "image": "../assets/images/product/product-1.jpg",
           "new_price": 8
         },
         {
@@ -586,7 +586,7 @@
           "product_id": 2,
           "name": "Corn",
           "in_stock": "Out of stock",
-          "image": "../src/assets/images/product/product-2.jpg",
+          "image": "../assets/images/product/product-2.jpg",
           "new_price": 6
         },
         {
@@ -594,7 +594,7 @@
           "product_id": 3,
           "name": "Cabbage",
           "in_stock": "In stock",
-          "image": "../src/assets/images/product/product-3.jpg",
+          "image": "../assets/images/product/product-3.jpg",
           "new_price": 7.7
         }
       ],
@@ -619,7 +619,7 @@
           "product_id": 4,
           "name": "Blackberries",
           "in_stock": "Out of stock",
-          "image": "../src/assets/images/product/product-4.jpg",
+          "image": "../assets/images/product/product-4.jpg",
           "new_price": 10
         },
         {
@@ -627,7 +627,7 @@
           "product_id": 5,
           "name": "Raspberries",
           "in_stock": "In stock",
-          "image": "../src/assets/images/product/product-5.jpg",
+          "image": "../assets/images/product/product-5.jpg",
           "new_price": 14
         }
       ],
@@ -649,7 +649,7 @@
       "product_id": 1,
       "name": "Pitahaya Dragon",
       "in_stock": "In stock",
-      "image": "../src/assets/images/product/product-1.jpg",
+      "image": "../assets/images/product/product-1.jpg",
       "new_price": 8
     },
     {
@@ -657,7 +657,7 @@
       "product_id": 2,
       "name": "Corn",
       "in_stock": "In stock",
-      "image": "../src/assets/images/product/product-2.jpg",
+      "image": "../assets/images/product/product-2.jpg",
       "new_price": 6
     },
     {
@@ -665,7 +665,7 @@
       "product_id": 3,
       "name": "Cabbage",
       "in_stock": "Out of stock",
-      "image": "../src/assets/images/product/product-3.jpg",
+      "image": "../assets/images/product/product-3.jpg",
       "new_price": 7.7
     },
     {
@@ -673,7 +673,7 @@
       "product_id": 4,
       "name": "Blackberries",
       "in_stock": "In stock",
-      "image": "../src/assets/images/product/product-4.jpg",
+      "image": "../assets/images/product/product-4.jpg",
       "new_price": 10
     },
     {
@@ -681,7 +681,7 @@
       "product_id": 5,
       "name": "Raspberries",
       "in_stock": "Out of stock",
-      "image": "../src/assets/images/product/product-5.jpg",
+      "image": "../assets/images/product/product-5.jpg",
       "new_price": 14
     }
   ],
@@ -695,7 +695,7 @@
           "name": "Pitahaya Dragon",
           "quantity": 8,
           "max_quantity": 5,
-          "image": "../src/assets/images/product/product-1.jpg",
+          "image": "../assets/images/product/product-1.jpg",
           "new_price": 8,
           "total": 64
         },
@@ -705,7 +705,7 @@
           "name": "Corn",
           "quantity": 2,
           "max_quantity": 0,
-          "image": "../src/assets/images/product/product-2.jpg",
+          "image": "../assets/images/product/product-2.jpg",
           "new_price": 6,
           "total": 12
         },
@@ -715,7 +715,7 @@
           "name": "Cabbage",
           "quantity": 5,
           "max_quantity": 15,
-          "image": "../src/assets/images/product/product-3.jpg",
+          "image": "../assets/images/product/product-3.jpg",
           "new_price": 7.7,
           "total": 38.5
         }
@@ -745,7 +745,7 @@
           "name": "Blackberries",
           "quantity": 10,
           "max_quantity": 0,
-          "image": "../src/assets/images/product/product-4.jpg",
+          "image": "../assets/images/product/product-4.jpg",
           "new_price": 10,
           "total": 100
         },
@@ -755,7 +755,7 @@
           "name": "Raspberries",
           "quantity": 15,
           "max_quantity": 15,
-          "image": "../src/assets/images/product/product-5.jpg",
+          "image": "../assets/images/product/product-5.jpg",
           "new_price": 13,
           "total": 195
         }
@@ -782,7 +782,7 @@
       "name": "McKenzie Mays",
       "quantity": 5,
       "max_quantity": 17,
-      "image": "../src/assets/images/product/product-9.jpg",
+      "image": "../assets/images/product/product-9.jpg",
       "new_price": 20,
       "total": 100
     },
@@ -792,7 +792,7 @@
       "name": "Avram Farrell",
       "quantity": 3,
       "max_quantity": 7,
-      "image": "../src/assets/images/product/product-9.jpg",
+      "image": "../assets/images/product/product-9.jpg",
       "new_price": 15,
       "total": 45
     },
@@ -802,7 +802,7 @@
       "name": "Avram Farrell",
       "quantity": 5,
       "max_quantity": 7,
-      "image": "../src/assets/images/product/product-9.jpg",
+      "image": "../assets/images/product/product-9.jpg",
       "new_price": 5.1,
       "total": 25.5
     }

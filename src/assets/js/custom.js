@@ -1,10 +1,11 @@
 export const jqueryHandlerCustom = {
   function() {
-    return function ($) {
+    (function ($) {
       "use strict";
-      // jQuery('.mean-menu').meanmenu({ 
-      //   meanScreenWidth: "991"
-      // });
+      console.log(jQuery);
+      jQuery('.mean-menu').meanmenu({ 
+        meanScreenWidth: "991"
+      });
       // Header Sticky, Go To Top JS
       $(window).on("scroll", function () {
         // Header Sticky JS
@@ -41,6 +42,6 @@ export const jqueryHandlerCustom = {
           // Removes Active Class From Other Titles
           $(".accordion-title").not($(this)).removeClass("active");
         });
-    }
+    })(jQuery)
   },
 };
