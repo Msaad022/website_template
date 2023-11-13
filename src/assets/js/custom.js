@@ -41,6 +41,6 @@ export const jqueryHandlerCustom = {
           // Removes Active Class From Other Titles
           $(".accordion-title").not($(this)).removeClass("active");
         });
-    })(jQuery)
+    })()
   },
 };
