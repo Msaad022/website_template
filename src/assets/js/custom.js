@@ -1,5 +1,5 @@
 export const jqueryHandlerCustom = {
-  function() {
+  function(jQuery) {
     return function ($) {
       "use strict";
       // jQuery('.mean-menu').meanmenu({ 
