@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { StartRating, PriceProduct } from "../components";
-import HeartFill from '../assets/images/heart.svg'
+import HeartFill from '../../public/assets/images/heart.svg'
 const ProductsItems = ({products ,productHandler ,addCart ,addWishList }) => {
   return (
     <div className="row">
