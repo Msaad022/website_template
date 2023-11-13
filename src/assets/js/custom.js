@@ -1,6 +1,6 @@
 export const jqueryHandlerCustom = {
   function() {
-    (function ($) {
+    (function ($,jQuery) {
       "use strict";
       console.log(jQuery);
       jQuery('.mean-menu').meanmenu({ 
