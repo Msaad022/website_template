@@ -2,16 +2,13 @@ export const jqueryHandlerCustom = {
   function() {
     (function ($) {
       "use strict";
-      $(window).on("scroll", function () {
-      
-        $('.mean-menu').meanmenu({ 
-          meanScreenWidth: "991"
-        });
-      });
       // Header Sticky, Go To Top JS
       $(window).on("scroll", function () {
         // Header Sticky JS
         if ($(this).scrollTop() > 150) {
+          jQuery('.mean-menu').meanmenu({ 
+            meanScreenWidth: "991"
+          });
           $(".navbar-area").addClass("is-sticky");
         } else {
           $(".navbar-area").removeClass("is-sticky");
@@ -44,6 +41,6 @@ export const jqueryHandlerCustom = {
           // Removes Active Class From Other Titles
           $(".accordion-title").not($(this)).removeClass("active");
         });
-    })()
+    })(jQuery)
   },
 };
