@@ -4,6 +4,9 @@ import { Footer } from "../components";
 const StarWrapper = (Component) =>
   function HOC() {
     useEffect(() => {
+      $('.mean-menu').meanmenu({ 
+        meanScreenWidth: "991"
+      });
       jqueryHandlerCustom.function();
     }, []);
 

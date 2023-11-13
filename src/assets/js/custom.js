@@ -2,21 +2,9 @@ export const jqueryHandlerCustom = {
   function() {
     (function ($) {
       "use strict";
-      function myFunction(x) {
-        if (x.matches) { // If media query matches
-          jQuery('.mean-menu').meanmenu({ 
-            meanScreenWidth: "991"
-          });
-          document.body.style.backgroundColor = "yellow";
-        } else {
-         document.body.style.backgroundColor = "pink";
-        }
-      }
-      
-      var x = window.matchMedia("(max-width: 991px)")
-      myFunction(x) // Call listener function at run time
-      x.addListener(myFunction) // Attach listener function on state changes
-
+      // jQuery('.mean-menu').meanmenu({ 
+      //   meanScreenWidth: "991"
+      // });
       // Header Sticky, Go To Top JS
       $(window).on("scroll", function () {
         // Header Sticky JS
