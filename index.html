@@ -1,12 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
+    <!-- Boxicons Min CSS -->
+    <link rel="stylesheet" href="/public/assets/css/boxicons.min.css" />
+    <link rel="stylesheet" href="/public/assets/css/meanmenu.min.css" />
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="/public/assets/css/animate.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/public/assets/css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/public/assets/css/responsive.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/assets/images/favicon.png"
+    />
+
+    <!-- Title -->
+    <title>Aava - Diet & Nutrition Health Center HTML Template</title>
+    <style>
+      /*Preloader Area Style*/
+      .preloader {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: #000000;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+      }
+
+      .preloader .lds-ripple {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        -webkit-transform: translate(-50px, -50px);
+        transform: translate(-50px, -50px);
+      }
+
+      .preloader .line-span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        position: absolute;
+      }
+      .preloader .loader-inner-1 {
+        top: 0;
+        left: 0;
+        -webkit-transform: rotate(70deg);
+        transform: rotate(70deg);
+      }
+      .preloader .line-span:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+        -webkit-animation-name: loading-1;
+        animation-name: loading-1;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+      }
+      .preloader .loader-inner-1:before {
+        background: #06aed5;
+      }
+      .preloader .loader-inner-2 {
+        top: 0;
+        right: 0;
+        -webkit-transform: rotate(160deg);
+        transform: rotate(160deg);
+      }
+
+      .preloader .loader-inner-2:before {
+        background: #ec008c;
+      }
+
+      .preloader .loader-inner-3 {
+        bottom: 0;
+        right: 0;
+        -webkit-transform: rotate(-110deg);
+        transform: rotate(-110deg);
+      }
+
+      .preloader .loader-inner-3:before {
+        background: #ffbf00;
+      }
+
+      .preloader .loader-inner-4 {
+        bottom: 0;
+        left: 0;
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+      }
+
+      .preloader .loader-inner-4:before {
+        background: #079c00;
+      }
+
+      .preloader.preloader-deactivate {
+        visibility: hidden;
+      }
+
+      @-webkit-keyframes loading-1 {
+        0% {
+          width: 20px;
+          right: 0;
+        }
+        30% {
+          width: 120px;
+          right: -100px;
+        }
+        60% {
+          width: 20px;
+          right: -100px;
+        }
+      }
+
+      @keyframes loading-1 {
+        0% {
+          width: 20px;
+          right: 0;
+        }
+        30% {
+          width: 120px;
+          right: -100px;
+        }
+        60% {
+          width: 20px;
+          right: -100px;
+        }
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        document.getElementsByClassName("preloader")[0].style.display = "none";
+      };
+    </script>
   </head>
   <body>
+    <noscript>
+      <style type="text/css">
+        .preloader {
+          display: none;
+        }
+      </style>
+      <div class="noscriptmsg">
+        You don't have javascript enabled. Good luck with that.
+      </div>
+    </noscript>
+    <!-- Start Preloader Area -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <span class="line-span loader-inner-1"></span>
+        <span class="line-span loader-inner-2"></span>
+        <span class="line-span loader-inner-3"></span>
+        <span class="line-span loader-inner-4"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
     <div id="app"><!--app-html--></div>
-    <script type="module" src="/src/entry-client.jsx"></script>
+    <!-- Jquery Min JS -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <!-- Meanmenu Min JS -->
+    <script src="/assets/js/meanmenu.min.js"></script>
+    <!-- Bootstrap Bundle Min JS -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v18.0&appId=529489038431521"
+      nonce="aZd7uxXC"
+    ></script>
+    <script type="module" src="/src/entry.client.jsx"></script>
   </body>
 </html>

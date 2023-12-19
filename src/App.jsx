@@ -1,38 +1,82 @@
-import { Link, Route, Routes } from "react-router-dom";
-import "../styles.css";
+import { ProductError, Header } from "./components";
+import { defer } from "react-router-dom";
+import { fitmasterHost } from "./constants";
+import {
+  Products,
+  ProductDetails,
+  ShoppingCart,
+  Wishlist,
+  Checkout,
+} from "./pages";
+import './app.css'
+export const routes = [
+  {
+    element: <Header />,
+    errorElement: <ProductError />,
+    children: [
+      {
+        path: "products",
+        loader: productsLoader,
+        element: <Products />,
+      },
+      {
+        path: "products/:id",
+        loader: detailsLoader,
+        element: <ProductDetails />,
+      },
+      {
+        path: "shoppingCart",
+        loader: shopingLoader,
+        element: <ShoppingCart />,
+      },
+      {
+        path: "wishlist",
+        loader: wishlistLoader,
+        element: <Wishlist />,
+      },
+      {
+        path: "checkout",
+        loader: checkoutLoader,
+        element: <Checkout />,
+      },
+    ],
+  },
+];
 
-// Auto generates routes from files under ./pages
-// https://vitejs.dev/guide/features.html#glob-import
-const pages = import.meta.glob("./pages/*.jsx", { eager: true });
+async function fetchData(url, msg) {
+  const res = await fetch(`${fitmasterHost}${url}`);
+  if (!res.ok) {
+    throw Error(`Could not find that ${msg}`);
+  }
+  let data = await res.json()
+  console.log(data);
+  return data;
+}
 
-const routes = Object.keys(pages).map((path) => {
-  const name = path.match(/\.\/pages\/(.*)\.jsx$/)[1];
-  return {
-    name,
-    path: name === "Home" ? "/" : `/${name.toLowerCase()}`,
-    component: pages[path].default,
-  };
-});
+export function productsLoader() {
+  return fetchData("/products?sort_by=latest&page=1", "Products");
+}
+export function shopingLoader() {
+  return fetchData("/cart?page=1", "Carts");
+}
+export function wishlistLoader() {
+  return fetchData("/wishlist?page=1", "Wishlist");
+}
+export function checkoutLoader() {
+  return {msg: 'test'};
+}
 
-export function App() {
-  return (
-    <>
-      <nav>
-        <ul>
-          {routes.map(({ name, path }) => {
-            return (
-              <li key={path}>
-                <Link to={path}>{name}</Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-      <Routes>
-        {routes.map(({ path, component: RouteComp }) => {
-          return <Route key={path} path={path} element={<RouteComp />}></Route>;
-        })}
-      </Routes>
-    </>
+export async function detailsLoader({ params }) {
+  const postId = params.id;
+  const resProduct = await fetch(`${fitmasterHost}/products/${postId}/`);
+  const resRelated = await fetch(
+    `${fitmasterHost}/products/${postId}/related/`
   );
+  if (!resProduct.ok) {
+    throw Error("Could not find that Product id");
+  }
+
+  const product = await resProduct.json();
+  const { data } = await resRelated.json();
+  return defer({ product: await product, productRelated: data });
 }
