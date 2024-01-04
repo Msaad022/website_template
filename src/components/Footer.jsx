@@ -8,7 +8,7 @@ const Footer = () => {
               <div className="single-footer-widget">
                 <a href="#" className="logo">
                   <img
-                    src="https://fmtest.smappsllc.com/website/assets/images/white-logo.png"
+                    // src="https://fmtest.smappsllc.com/website/assets/images/white-logo.png"
                     alt="Image"
                     style={{width: '200px', height: '70px'}}
                   />
@@ -48,7 +48,7 @@ const Footer = () => {
                     <a href="#" target="_blank">
                       <i>
                         <img
-                          src="https://fmtest.smappsllc.com/img/tiktok-16.png"
+                          // src="https://fmtest.smappsllc.com/img/tiktok-16.png"
                           className="p-1"
                         />
                       </i>

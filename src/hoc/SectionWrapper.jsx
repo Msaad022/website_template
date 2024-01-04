@@ -1,12 +1,11 @@
-import { useEffect } from "react";
-import { jqueryHandlerCustom } from "../../public/assets/js/custom";
+// import { useEffect } from "react";
+// import { jqueryHandlerCustom } from "../../public/assets/js/custom";
 import { Footer } from "../components";
 const StarWrapper = (Component) =>
   function HOC() {
-    useEffect(() => {
-    
-      jqueryHandlerCustom.function();
-    }, []);
+    // useEffect(() => {
+    //   jqueryHandlerCustom.function();
+    // }, []);
 
     return (
       <>

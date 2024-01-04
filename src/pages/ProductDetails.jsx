@@ -6,7 +6,7 @@ import {
   PriceProduct,
   SwiperProductModal,
   FacebookButton,
-  PageTitle
+  Breadcrumb
 } from "../components";
 import { useState, Suspense, useRef, useEffect } from "react";
 import { useStateContext } from "../context/StateContext";
@@ -124,7 +124,7 @@ const ProductDetails = () => {
     <>
       <Toaster />
       {/* <!-- Start Page Title Area --> */}
-      <PageTitle title="Product Details"/>
+      <Breadcrumb title="Product Details"/>
       {/* <!-- End Page Title Area --> */}
 
       {/* <!-- Start Product Details Area --> */}

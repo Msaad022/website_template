@@ -1,147 +1,26 @@
 import { Outlet, Link } from "react-router-dom";
+import { IoEarthSharp } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
+import { RiUser3Fill } from "react-icons/ri";
+import { BiSolidLogIn } from "react-icons/bi";
+import { FiMenu } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
 const Header = () => {
   return (
     <>
-      <header className="header-area">
-        {/* <!-- Start Top Header --> */}
-        <div className="top-header">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-12 col-md-12">
-                <div className="header-right-content text-center " dir="ltr">
-                  <div className="language">
-                    <div className="dropdown language-settings">
-                      <button
-                        className="dropdown-toggle language-btn"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                      >
-                        <i className="bx bx-chevron-down"></i>
-                        <span className="bx bx-world"></span>
-                      </button>
-                      <div className="dropdown-menu">
-                        <a href="#" className="dropdown-item">
-                          <img
-                            src="https://fmtest.smappsllc.com/website/assets/images/language/english.png"
-                            alt="Flag"
-                          />
-                          <span>English</span>
-                        </a>
-
-                        <a href="#" className="dropdown-item">
-                          <img
-                            src="https://fmtest.smappsllc.com/website/assets/images/language/egypt.svg"
-                            alt="Flag"
-                          />
-                          <span>العربية</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <ul className="my-account">
-                    <li>
-                      <a href="#">
-                        <i className="bx bxs-user"></i>
-                        Register
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="bx bxs-log-in"></i>
-                        Login
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- Start Top Header --> */}
-
-        {/* <!-- Start Navbar Area --> */}
-        <div className="navbar-area">
-          <div className="mobile-nav mb-4">
-            <div className="container">
-              <div className="mobile-menu"></div>
-            </div>
-          </div>
-
-          <div className="desktop-nav">
-            <div className="container-flud" style={{ padding: "0 20px" }}>
-              <nav className="navbar navbar-expand-md navbar-light">
-                <a className="navbar-brand" href="#">
-                  <img
-                    src="https://fmtest.smappsllc.com/website/assets/images/logo.png"
-                    alt="logo"
-                  />
-                </a>
-
-                <div className="collapse navbar-collapse mean-menu">
-                  <ul className="navbar-nav m-auto">
-                    <li className="nav-item">
-                      <Link to="/products" className="nav-link">
-                        Products
-                      </Link>
-                    </li>
-
-                    <li className="nav-item">
-                      <Link to="/products/1" className="nav-link">
-                        ProductDetails
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/shoppingCart" className="nav-link">
-                        ShoppingCart
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/wishlist" className="nav-link">
-                        Wishlist
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/checkout" className="nav-link">
-                        Checkout
-                      </Link>
-                    </li>
-                  </ul>
-
-                  <div className="others-option">
-                    <div className="get-quote">
-                      <a href="#" className="default-btn">
-                        Get Appointment
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-
-          <div className="others-option-for-responsive">
-            <div className="container">
-              <div className="dot-menu">
-                <div className="inner">
-                  <div className="circle circle-one"></div>
-                  <div className="circle circle-two"></div>
-                  <div className="circle circle-three"></div>
-                </div>
-              </div>
-
-              <div className="container">
-                <div className="option-inner">
-                  <div className="others-option justify-content-center d-flex align-items-center">
-                    <a href="#" className="btn btn-success btn-sm w-70">
-                      Get Appointment
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- End Navbar Area --> */}
+      <header className="flex flex-wrap">
+        <TopNav />
+        <nav className="relative flex flex-wrap w-full m-auto min-h-10 px-5 py-3 items-center bg-white">
+          <a className="navbar-brand flex-grow" href="#">
+            <img
+              src="https://app.fitmaster.pro/website/assets/images/logo.png"
+              alt="logo"
+              className="max-md2:w-[170px]"
+            />
+          </a>
+          <DesktopNav />
+          <MobileNav />
+        </nav>
       </header>
       <Outlet />
     </>
@@ -149,3 +28,205 @@ const Header = () => {
 };
 
 export default Header;
+
+export function TopNav() {
+  return (
+    <div className="w-full bg-[#f8fdf5] px-4 py-4">
+      <div className="flex justify-center items-center gap-4 sm:gap-8 text-sm flex-wrap ">
+        <div className=" relative">
+          <button
+            className="hover:text-main-color focus:text-main-color transition duration-500 flex gap-1 peer focus:pointer-events-none"
+            type="button"
+            tabIndex="0"
+            data-bs-toggle="dropdown"
+          >
+            <IoEarthSharp className="text-main-color" />
+            <IoIosArrowDown />
+            <span className="bx bx-world"></span>
+          </button>
+          <div className="peer-focus:[transform:rotateY(0deg)] z-10 [transform:rotateY(90deg)] w-40 top-6 absolute border-t-2 border-main-color bg-white py-3 shadow-md transition duration-500">
+            <ul className="flex flex-wrap *:w-full *:flex *:gap-2 *:items-center *:py-1 *:px-4 *:select-none *:transition *:duration-500 *:cursor-pointer">
+              <li className="hover:text-main-color">
+                <img
+                  src="https://app.fitmaster.pro/website/assets/images/language/english.png"
+                  alt="Flag"
+                  className="w-5 h-5 rounded-full"
+                />
+                <span>English</span>
+              </li>
+              <li className="hover:text-main-color">
+                <img
+                  src="https://app.fitmaster.pro/website/assets/images/language/egypt.svg"
+                  alt="Flag"
+                  className="w-5 h-5 rounded-full"
+                />
+                <span>العربية</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul className="flex gap-4 sm:gap-8  flex-wrap justify-center">
+          <li>
+            <a
+              href="#"
+              className="hover:text-main-color transition duration-300 flex gap-1 items-center"
+            >
+              <RiUser3Fill className="text-main-color" />
+              Register
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="hover:text-main-color transition duration-300 flex gap-1 items-center"
+            >
+              <BiSolidLogIn className="text-main-color" /> Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export function DesktopNav() {
+  return (
+    <div className="hidden md2:flex items-center flex-grow-[2]">
+      <ul className="flex justify-evenly text-sm flex-grow *:transition hover:[&>li:not(:nth-child(2))]:text-main-color *:duration-300 font-bold *:h-10 *:flex *:items-center">
+        <li>
+          <a href="#" className="nav-link active">
+            Home
+          </a>
+        </li>
+        <li className="group/item">
+          <button
+            href="#"
+            className="group-hover/item:text-main-color transition duration-300"
+            type="button"
+          >
+            Pages
+            <IoIosArrowDown className=" inline-block ml-2" />
+          </button>
+
+          <ul className="absolute top-24 group-hover/item:-translate-y-6 group-hover/item:opacity-100 opacity-0 group-hover/item:visible invisible font-semibold transition-[visibility_linear,opacity_linear] duration-300 w-60 border-t-2 border-main-color bg-white shadow-md *:transition *:duration-300 *:py-3 *:px-3 hover:[&>li]:text-main-color [&>*:not(:last-child)]:border-b *:border-dashed">
+            <li>
+              <Link to="/products">Products</Link>
+            </li>
+            <li>
+              <Link to="/products/1">ProductsDetails</Link>
+            </li>
+            <li>
+              <Link to="/products/cart">Cart</Link>
+            </li>
+            <li>
+              <Link to="/products/wishlist">Wishlist</Link>
+            </li>
+            <li>
+              <Link to="/products/checkout">Checkout</Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" className="nav-link">
+            Recipes
+          </a>
+        </li>
+        <li>
+          <a href="#" className="nav-link">
+            Packages
+          </a>
+        </li>
+        <li>
+          <a href="#" className="nav-link">
+            Contact us
+          </a>
+        </li>
+      </ul>
+
+      <div className="flex pr-3 justify-end flex-grow">
+        <div className="p-3 lg2:py-3 lg2:px-9 max-lg2:text-sm bg-main-color text-center w-max text-white hover:bg-[#1b1b1b] rounded transition-[padding_linear,background-color_linear] duration-300">
+          <a href="#" className="default-btn">
+            Get Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function MobileNav() {
+  return (
+    <div className="flex flex-grow-[2] items-center justify-end md2:hidden">
+      <fieldset tabIndex={1} className="group/down flex-grow min-w-14 h-10  max-[265px]:[&>button]:top-3/4 [&>button]:top-1/2 [&>button]:right-[10%] [&>button]:-translate-y-1/2 *:duration-150 *:absolute text-4xl">
+        <button className=" peer/button relative w-9 h-9 [&>label]:transition-[visibility,opacity] *:absolute *:top-0 *:left-0 focus:pointer-events-none">
+          <FiMenu className="visible opacity-100 group-focus/down:invisible group-focus/down:opacity-0" />
+          <IoClose className="invisible opacity-0 group-focus/down:visible group-focus/down:opacity-100" />
+        </button>
+        <div className="top-full left-1/2 -translate-x-1/2 w-4/5 max-h-0 transition-[max-height] ease-out duration-500 group-focus/down:transition-[max-height] group-focus/down:max-h-screen group-focus/down:ease-in group-focus/down:duration-500 overflow-hidden z-[19]">
+          <ul className="text-sm bg-white shadow-md [&_a]:block [&_a]:pl-6 [&_a]:pr-2 [&_a]:py-3 *:border-t *:border-[#DBEEFD] text-[#677294] *:transition-colors *:duration-300 select-none">
+            <li className="hover:text-main-color">
+              <a href="#" className="">
+                Home
+              </a>
+            </li>
+            <li tabIndex={2} className="group/li min-h-[45px]">
+              <button
+                href="#"
+                className="pl-6 py-3 text-base flex w-full justify-between hover:text-main-color"
+                type="button"
+              >
+                <span>Pages</span>
+                <div className=" relative w-10 *:absolute">
+                  <span className="group-focus/li:opacity-0 transition duration-150">
+                    +
+                  </span>
+                  <span>-</span>
+                </div>
+              </button>
+              <ul className="*:pl-6 *:border-t *:border-[#DBEEFD] max-h-0 transition-[max-height] ease-out duration-500 group-focus/li:transition-[max-height] group-focus/li:max-h-screen group-focus/li:ease-in group-focus/li:duration-500 overflow-hidden z-20 *:transition-colors *:duration-300">
+                <li className="hover:text-main-color">
+                  <Link to="/products">Products</Link>
+                </li>
+                <li className="hover:text-main-color">
+                  <Link to="/products/1">ProductsDetails</Link>
+                </li>
+                <li className="hover:text-main-color">
+                  <Link to="/products/cart">Cart</Link>
+                </li>
+                <li className="hover:text-main-color">
+                  <Link to="/products/wishlist">Wishlist</Link>
+                </li>
+                <li className="hover:text-main-color">
+                  <Link to="/products/checkout">Checkout</Link>
+                </li>
+              </ul>
+            </li>
+            <li className="hover:text-main-color">
+              <a href="#" className="nav-link">
+                Recipes
+              </a>
+            </li>
+            <li className="hover:text-main-color">
+              <a href="#" className="nav-link">
+                Packages
+              </a>
+            </li>
+            <li className="hover:text-main-color">
+              <a href="#" className="nav-link">
+                Contact us
+              </a>
+            </li>
+          </ul>
+
+          <div className="mt-10">
+            <div className="p-3 px-9 text-sm bg-main-color text-center w-max text-white hover:bg-[#1b1b1b] rounded duration-300">
+              <a href="#" className="default-btn">
+                Get Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  );
+}

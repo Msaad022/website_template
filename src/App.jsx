@@ -1,62 +1,70 @@
 import { ProductError, Header } from "./components";
-import { defer } from "react-router-dom";
+import { defer, useLoaderData } from "react-router-dom";
 import { fitmasterHost } from "./constants";
 import {
   Products,
   ProductDetails,
-  ShoppingCart,
+  Cart,
   Wishlist,
   Checkout,
 } from "./pages";
 import './app.css'
 export const routes = [
   {
+    path: "/products",
     element: <Header />,
     errorElement: <ProductError />,
     children: [
       {
-        path: "products",
+        index: true,
         loader: productsLoader,
-        element: <Products />,
+        element: <Products/> 
       },
       {
-        path: "products/:id",
+        path: ":id",
         loader: detailsLoader,
-        element: <ProductDetails />,
+        // element: <ProductDetails/>,
+        element: <Test name="ProductDetails"/>,
+
       },
       {
-        path: "shoppingCart",
-        loader: shopingLoader,
-        element: <ShoppingCart />,
+        path: "cart",
+        loader: cartLoader,
+        // element: <Cart/>,
+        element: <Test name="Cart"/>,
+
       },
       {
         path: "wishlist",
         loader: wishlistLoader,
-        element: <Wishlist />,
+        // element: <Wishlist/>,
+        element: <Test name="Wishlist"/>,
+
       },
       {
         path: "checkout",
         loader: checkoutLoader,
-        element: <Checkout />,
+        // element: <Checkout/>,
+        element: <Test name="Checkout"/>,
+
       },
     ],
   },
 ];
-
 async function fetchData(url, msg) {
   const res = await fetch(`${fitmasterHost}${url}`);
   if (!res.ok) {
     throw Error(`Could not find that ${msg}`);
   }
   let data = await res.json()
-  console.log(data);
+  // console.log(data);
   return data;
 }
 
 export function productsLoader() {
   return fetchData("/products?sort_by=latest&page=1", "Products");
 }
-export function shopingLoader() {
+export function cartLoader() {
   return fetchData("/cart?page=1", "Carts");
 }
 export function wishlistLoader() {
@@ -79,4 +87,10 @@ export async function detailsLoader({ params }) {
   const product = await resProduct.json();
   const { data } = await resRelated.json();
   return defer({ product: await product, productRelated: data });
+}
+
+export function Test({name}){
+  let data = useLoaderData()
+    console.log(data);
+  return <h1>{name}</h1>
 }

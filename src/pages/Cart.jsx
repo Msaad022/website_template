@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { Link, useLoaderData } from "react-router-dom";
-import { PriceProduct, SwiperPagination,PageTitle } from "../components";
+import { PriceProduct, SwiperPagination,Breadcrumb } from "../components";
 import toast, { Toaster } from "react-hot-toast";
 import { useStateContext } from "../context/StateContext";
 import { fitmasterHost } from "../constants";
-const ShoppingCart = () => {
+const Cart = () => {
   const {cartStore, deleteStore, creatPagination } = useStateContext();
 
   const data = useLoaderData();
@@ -142,7 +142,7 @@ const hocButton = (name) =>
     <>
       <Toaster />
       {/* <!-- Start Page Title Area --> */}
-      <PageTitle title="Shopping Cart"/>
+      <Breadcrumb title="Shopping Cart"/>
       {/* <!-- End Page Title Area --> */}
 
       {/* <!-- Start Shopping Cart Area --> */}
@@ -280,7 +280,7 @@ const hocButton = (name) =>
                 </span> 
               </li>
             </ul>
-            <Link to="/checkout" className="default-btn">
+            <Link to="/products/checkout" className="default-btn">
               <span>Proceed to checkout</span>
             </Link>
           </div>
@@ -316,4 +316,4 @@ const hocButton = (name) =>
   );
 };
 
-export default SectionWrapper(ShoppingCart);
+export default SectionWrapper(Cart);

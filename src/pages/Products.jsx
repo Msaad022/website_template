@@ -6,7 +6,7 @@ import {
   SwiperProductModal,
   SwiperPagination,
   ProductsItems,
-  PageTitle,
+  Breadcrumb,
 } from "../components";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -56,14 +56,14 @@ const Products = () => {
   };
   const paginationdHandler = async (pageIndex) => {
     let page = pageIndex;
-    let url = `${fitmasterHost}/products?sort_by=${selectedSort}&page=${page}`
+    let url = `${fitmasterHost}/products?sort_by=${selectedSort}&page=${page}`;
 
     try {
-        setIsLoading(true);
-        setCurrentPage(page);
-        let result = await creatPagination(url);
-        const { data } = result;
-        setProducts(data);
+      setIsLoading(true);
+      setCurrentPage(page);
+      let result = await creatPagination(url);
+      const { data } = result;
+      setProducts(data);
     } catch (res) {
       toast.error(res.message);
     } finally {
@@ -141,75 +141,64 @@ const Products = () => {
     <>
       <Toaster />
       {/* <!-- Start Page Title Area --> */}
-      <PageTitle title="Products" />
+      <Breadcrumb mainPage="Products" page={undefined} />
       {/* <!-- End Page Title Area --> */}
 
       {/* <!-- Start Product Area --> */}
-      <section className="product-area ptb-100">
-        <div className="container">
-          <div className="showing-result">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-sm-6">
-                <div className="showing-result-count">
-                  <p>
-                    Showing{" "}
-                    <span className="showing-span">
-                      {from}&nbsp;-&nbsp;{last}
-                    </span>
-                    &nbsp; of &nbsp;
-                    <span className="showing-span">{total}</span> Results
-                  </p>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-sm-6">
-                <div className="showing-top-bar-ordering">
-                  <SelectElement sortSelectedHandler={sortSelectedHandler} />
-                </div>
-              </div>
-            </div>
+      <section className="p-10">
+        <div className="flex flex-wrap gap-10 justify-between items-center py-2">
+          <div className="flex-grow-[2]">
+            <p className="[&_>span]:text-main-color text-gray-500">
+              Showing{" "}
+              <span className="">
+                {from}&nbsp;-&nbsp;{last}
+              </span>
+              &nbsp; of &nbsp;
+              <span className="">{total}</span> Results
+            </p>
           </div>
 
-          <div
-            className="col-12"
-            style={{ height: "33px", margin: "10px 0px" }}
+          <div className="flex-grow">
+            <SelectElement sortSelectedHandler={sortSelectedHandler} />
+          </div>
+        </div>
+
+        <div className="col-12" style={{ height: "33px", margin: "10px 0px" }}>
+          {isLoading && <div className="spinner-border" role="status"></div>}
+        </div>
+        <ProductsItems
+          products={products.items}
+          productHandler={productHandler}
+          addCart={addCart}
+          addWishList={addWishList}
+        />
+
+        {/* <!-- Start pagination Area --> */}
+
+        <div className="col-12 pagination-area">
+          <button
+            type="button"
+            className="prev-button page-numbers"
+            disabled={total_pages > 4 ? false : true}
+            onClick={prevButton}
           >
-            {isLoading && <div className="spinner-border" role="status"></div>}
+            <i className="bx bx-left-arrow-alt"></i>{" "}
+          </button>
+          <div className="pagination-swiper">
+            <SwiperPagination
+              totalPages={total_pages}
+              currentPage={currentPage}
+              paginationdHandler={paginationdHandler}
+            />
           </div>
-          <ProductsItems
-            products={products.items}
-            productHandler={productHandler}
-            addCart={addCart}
-            addWishList={addWishList}
-          />
-
-          {/* <!-- Start pagination Area --> */}
-
-          <div className="col-12 pagination-area">
-            <button
-              type="button"
-              className="prev-button page-numbers"
-              disabled={total_pages > 4 ? false : true}
-              onClick={prevButton}
-            >
-              <i className="bx bx-left-arrow-alt"></i>{" "}
-            </button>
-            <div className="pagination-swiper">
-              <SwiperPagination
-                totalPages={total_pages}
-                currentPage={currentPage}
-                paginationdHandler={paginationdHandler}
-              />
-            </div>
-            <button
-              type="button"
-              className="next-button page-numbers"
-              disabled={total_pages > 4 ? false : true}
-              onClick={nextButton}
-            >
-              <i className="bx bx-right-arrow-alt"></i>{" "}
-            </button>
-          </div>
+          <button
+            type="button"
+            className="next-button page-numbers"
+            disabled={total_pages > 4 ? false : true}
+            onClick={nextButton}
+          >
+            <i className="bx bx-right-arrow-alt"></i>{" "}
+          </button>
         </div>
       </section>
 

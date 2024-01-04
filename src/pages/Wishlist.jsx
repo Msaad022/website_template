@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { Link, useLoaderData } from "react-router-dom";
-import { PriceProduct, SwiperPagination,PageTitle } from "../components";
+import { PriceProduct, SwiperPagination,Breadcrumb } from "../components";
 import toast, { Toaster } from "react-hot-toast";
 import { useStateContext } from "../context/StateContext";
 import { fitmasterHost } from "../constants";
@@ -81,7 +81,7 @@ const Wishlist = () => {
     <>
       <Toaster />
       {/* <!-- Start Page Title Area --> */}
-      <PageTitle title="Wishlist"/>
+      <Breadcrumb title="Wishlist"/>
       {/* <!-- End Page Title Area --> */}
       {/* <!-- Start Shopping Cart Area --> */}
       <div className="shopping-cart-area wishlist-style ptb-100">

@@ -10,7 +10,6 @@ export const StateContext = ({ children }) => {
     console.log(`${fitmasterHost}/cart/${id}`);
     const response = await fetch(`${fitmasterHost}/cart/${id}`, {
       method: "POST",
-      method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
         Authorization: `Bearer ${token}`,
