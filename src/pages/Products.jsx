@@ -3,38 +3,24 @@ import { SectionWrapper } from "../hoc";
 import { useState } from "react";
 import {
   SelectElement,
-  SwiperProductModal,
   SwiperPagination,
   ProductsItems,
-  Breadcrumb,
+  Breadcrumb
 } from "../components";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
 import { fitmasterHost } from "../constants";
 
 const Products = () => {
   const { data } = useLoaderData();
-  const { cartStore, wishlistStore, creatSortBy, creatPagination } =
+  const { wishlistStore, creatSortBy, creatPagination } =
     useStateContext();
 
   const [products, setProducts] = useState(data);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedSort, setSelectedSort] = useState("latest");
   const [isLoading, setIsLoading] = useState(false);
-  const [swiperProduct, setSwiperProduct] = useState([
-    {
-      id: 1,
-      name: "",
-      images: undefined,
-      description: "",
-      new_price: "",
-      quantity: "",
-      categories: undefined,
-      stars: "",
-      index: 0,
-    },
-  ]);
 
   const sortSelectedHandler = async (e) => {
     let sort = e.value;
@@ -71,11 +57,6 @@ const Products = () => {
     }
   };
 
-  const productHandler = (itemId) => {
-    document.getElementById("defaultQty").textContent = 1;
-    setSwiperProduct(products.items.filter((item) => item.id == itemId));
-  };
-
   const paginateCalc = (total, count, current_page) => {
     let from = (current_page - 1) * count + 1;
     let to = current_page * count;
@@ -89,24 +70,6 @@ const Products = () => {
 
   let { from, last } = paginateCalc(total, per_page, current_page);
 
-  const addCart = async (id, qty, qtyMax) => {
-    try {
-      if (qty <= qtyMax && qty != 0) {
-        let res = await cartStore(id, qty, "mohamed_saad");
-        if (res) {
-          toast.success(`${qty} item was added to cart!`);
-        }
-      } else {
-        toast("Sorry, this product is not available now", {
-          duration: 3000,
-          icon: "⛔",
-        });
-      }
-    } catch (res) {
-      toast.error(res.message);
-    }
-  };
-
   const addWishList = async (id, index, is_liked) => {
     try {
       if (!is_liked) {
@@ -114,7 +77,7 @@ const Products = () => {
         let item = items[index];
         item.is_liked = true;
 
-        let res = await wishlistStore(id, "mohamed_saad");
+        let res = await wishlistStore(id, "_token");
         if (res) {
           setProducts({
             items: items,
@@ -130,22 +93,14 @@ const Products = () => {
     }
   };
 
-  const hocButton = (name) =>
-    function () {
-      document.getElementsByClassName(name)[0].click();
-    };
-
-  const prevButton = hocButton("swiper-button-prev");
-  const nextButton = hocButton("swiper-button-next");
   return (
     <>
-      <Toaster />
       {/* <!-- Start Page Title Area --> */}
       <Breadcrumb mainPage="Products" page={undefined} />
       {/* <!-- End Page Title Area --> */}
 
       {/* <!-- Start Product Area --> */}
-      <section className="p-10">
+      <section className="p-10 md:p-12 lg:p-20">
         <div className="flex flex-wrap gap-10 justify-between items-center py-2">
           <div className="flex-grow-[2]">
             <p className="[&_>span]:text-main-color text-gray-500">
@@ -163,46 +118,24 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="col-12" style={{ height: "33px", margin: "10px 0px" }}>
+        <div className="w-full h-8 my-3">
           {isLoading && <div className="spinner-border" role="status"></div>}
         </div>
         <ProductsItems
           products={products.items}
-          productHandler={productHandler}
-          addCart={addCart}
           addWishList={addWishList}
         />
 
         {/* <!-- Start pagination Area --> */}
 
-        <div className="col-12 pagination-area">
-          <button
-            type="button"
-            className="prev-button page-numbers"
-            disabled={total_pages > 4 ? false : true}
-            onClick={prevButton}
-          >
-            <i className="bx bx-left-arrow-alt"></i>{" "}
-          </button>
-          <div className="pagination-swiper">
-            <SwiperPagination
-              totalPages={total_pages}
-              currentPage={currentPage}
-              paginationdHandler={paginationdHandler}
-            />
-          </div>
-          <button
-            type="button"
-            className="next-button page-numbers"
-            disabled={total_pages > 4 ? false : true}
-            onClick={nextButton}
-          >
-            <i className="bx bx-right-arrow-alt"></i>{" "}
-          </button>
+        <div className="flex my-8 ">
+          <SwiperPagination
+            totalPages={total_pages}
+            currentPage={currentPage}
+            paginationdHandler={paginationdHandler}
+          />
         </div>
       </section>
-
-      <SwiperProductModal product={swiperProduct[0]} addCart={addCart} />
       {/* <!-- End Product Area --> */}
     </>
   );

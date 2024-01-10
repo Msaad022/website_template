@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import SelectElement from './Select';
 import {SwiperProductModal,SwiperPagination} from './swiper/SwiperElement'
-import { StartRating, PriceProduct, FacebookButton } from './StartRating';
+import { StarRating, PriceProduct, FacebookButton } from './StarRating';
 import ProductsItems from './ProductsItems'
 import Breadcrumb from './Breadcrumb'
 export {
@@ -13,7 +13,7 @@ export {
   SelectElement,
   SwiperProductModal,
   SwiperPagination,
-  StartRating,
+  StarRating,
   PriceProduct,
   FacebookButton,
   ProductsItems,

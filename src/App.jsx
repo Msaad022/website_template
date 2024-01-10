@@ -1,14 +1,8 @@
 import { ProductError, Header } from "./components";
-import { defer, useLoaderData } from "react-router-dom";
+import { defer } from "react-router-dom";
 import { fitmasterHost } from "./constants";
-import {
-  Products,
-  ProductDetails,
-  Cart,
-  Wishlist,
-  Checkout,
-} from "./pages";
-import './app.css'
+import { Products, ProductDetails, Cart, Wishlist, Checkout } from "./pages";
+import "./app.css";
 export const routes = [
   {
     path: "/products",
@@ -18,35 +12,27 @@ export const routes = [
       {
         index: true,
         loader: productsLoader,
-        element: <Products/> 
+        element: <Products />,
       },
       {
         path: ":id",
         loader: detailsLoader,
-        // element: <ProductDetails/>,
-        element: <Test name="ProductDetails"/>,
-
+        element: <ProductDetails />,
       },
       {
         path: "cart",
         loader: cartLoader,
-        // element: <Cart/>,
-        element: <Test name="Cart"/>,
-
+        element: <Cart />,
       },
       {
         path: "wishlist",
         loader: wishlistLoader,
-        // element: <Wishlist/>,
-        element: <Test name="Wishlist"/>,
-
+        element: <Wishlist />,
       },
       {
         path: "checkout",
         loader: checkoutLoader,
-        // element: <Checkout/>,
-        element: <Test name="Checkout"/>,
-
+        element: <Checkout />,
       },
     ],
   },
@@ -56,22 +42,23 @@ async function fetchData(url, msg) {
   if (!res.ok) {
     throw Error(`Could not find that ${msg}`);
   }
-  let data = await res.json()
-  // console.log(data);
+  let data = await res.json();
   return data;
 }
 
 export function productsLoader() {
   return fetchData("/products?sort_by=latest&page=1", "Products");
 }
+
 export function cartLoader() {
   return fetchData("/cart?page=1", "Carts");
 }
+
 export function wishlistLoader() {
   return fetchData("/wishlist?page=1", "Wishlist");
 }
 export function checkoutLoader() {
-  return {msg: 'test'};
+  return { msg: "test" };
 }
 
 export async function detailsLoader({ params }) {
@@ -84,13 +71,7 @@ export async function detailsLoader({ params }) {
     throw Error("Could not find that Product id");
   }
 
-  const product = await resProduct.json();
-  const { data } = await resRelated.json();
-  return defer({ product: await product, productRelated: data });
-}
-
-export function Test({name}){
-  let data = useLoaderData()
-    console.log(data);
-  return <h1>{name}</h1>
+  const { data } = await resProduct.json();
+  const related = await resRelated.json();
+  return defer({ product: await data, productRelated: related });
 }

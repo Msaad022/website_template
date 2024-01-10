@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { fitmasterHost } from "../constants";
+import toast from "react-hot-toast";
 
 const Context = createContext();
 Context.displayName = "Products_Context";
@@ -7,7 +8,6 @@ Context.displayName = "Products_Context";
 export const StateContext = ({ children }) => {
 
   const cartStore = async (id, qty, token) => {
-    console.log(`${fitmasterHost}/cart/${id}`);
     const response = await fetch(`${fitmasterHost}/cart/${id}`, {
       method: "POST",
       headers: {
@@ -29,7 +29,6 @@ export const StateContext = ({ children }) => {
   const wishlistStore = async (id, token) => {
     const response = await fetch(`${fitmasterHost}/wishlist/${id}`, {
       method: "POST",
-      method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
         Authorization: `Bearer ${token}`,
@@ -78,6 +77,25 @@ export const StateContext = ({ children }) => {
 
     return res.json();
   };
+
+  const addCart = async (id, qty, qtyMax) => {
+    try {
+      if (qty <= qtyMax && qty != 0) {
+        let res = await cartStore(id, qty, "_token");
+        if (res) {
+          toast.success(`${qty} item was added to cart!`);
+        }
+      } else {
+        toast(`Sorry, this product is not available now`, {
+          duration: 3000,
+          icon: "⛔",
+        });
+      }
+    } catch (res) {
+      toast.error(res.message);
+    }
+  };
+
   return (
     <Context.Provider
       value={{
@@ -86,6 +104,7 @@ export const StateContext = ({ children }) => {
         wishlistStore,
         creatSortBy,
         creatPagination,
+        addCart
       }}
     >
       {children}

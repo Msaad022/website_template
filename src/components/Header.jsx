@@ -108,7 +108,7 @@ export function DesktopNav() {
             <IoIosArrowDown className=" inline-block ml-2" />
           </button>
 
-          <ul className="absolute top-24 group-hover/item:-translate-y-6 group-hover/item:opacity-100 opacity-0 group-hover/item:visible invisible font-semibold transition-[visibility_linear,opacity_linear] duration-300 w-60 border-t-2 border-main-color bg-white shadow-md *:transition *:duration-300 *:py-3 *:px-3 hover:[&>li]:text-main-color [&>*:not(:last-child)]:border-b *:border-dashed">
+          <ul className="absolute top-24 group-hover/item:-translate-y-6 group-hover/item:opacity-100 opacity-0 group-hover/item:visible invisible font-semibold transition-[visibility_linear,opacity_linear] duration-300 w-60 border-t-2 border-main-color bg-white shadow-md *:transition *:duration-300 [&>li>a]:py-3 [&>li>a]:px-3 [&>li>a]:block hover:[&>li]:text-main-color [&>*:not(:last-child)]:border-b *:border-dashed">
             <li>
               <Link to="/products">Products</Link>
             </li>
@@ -157,33 +157,33 @@ export function DesktopNav() {
 export function MobileNav() {
   return (
     <div className="flex flex-grow-[2] items-center justify-end md2:hidden">
-      <fieldset tabIndex={1} className="group/down flex-grow min-w-14 h-10  max-[265px]:[&>button]:top-3/4 [&>button]:top-1/2 [&>button]:right-[10%] [&>button]:-translate-y-1/2 *:duration-150 *:absolute text-4xl">
-        <button className=" peer/button relative w-9 h-9 [&>label]:transition-[visibility,opacity] *:absolute *:top-0 *:left-0 focus:pointer-events-none">
+      <fieldset className=" flex-grow min-w-14 h-10  max-[265px]:[&>button]:top-3/4 [&>button]:top-1/2 [&>button]:right-[10%] [&>button]:-translate-y-1/2 *:duration-150 *:absolute text-4xl">
+        <button
+          tabIndex={0}
+          className="focus:pointer-events-none group/down peer/button relative w-9 h-9 [&>label]:transition-[visibility,opacity] *:absolute *:top-0 *:left-0"
+        >
           <FiMenu className="visible opacity-100 group-focus/down:invisible group-focus/down:opacity-0" />
           <IoClose className="invisible opacity-0 group-focus/down:visible group-focus/down:opacity-100" />
         </button>
-        <div className="top-full left-1/2 -translate-x-1/2 w-4/5 max-h-0 transition-[max-height] ease-out duration-500 group-focus/down:transition-[max-height] group-focus/down:max-h-screen group-focus/down:ease-in group-focus/down:duration-500 overflow-hidden z-[19]">
-          <ul className="text-sm bg-white shadow-md [&_a]:block [&_a]:pl-6 [&_a]:pr-2 [&_a]:py-3 *:border-t *:border-[#DBEEFD] text-[#677294] *:transition-colors *:duration-300 select-none">
+        <div className="top-full bg-white shadow-md peer-focus/button:pb-5 left-1/2 -translate-x-1/2 w-4/5 max-h-0 transition-[max-height] ease-out duration-500 peer-focus/button:transition-[max-height] peer-focus/button:max-h-screen peer-focus/button:ease-in peer-focus/button:duration-500 overflow-hidden z-50">
+          <ul className="text-sm [&_a]:block [&_a]:pl-6 [&_a]:pr-2 [&_a]:py-3 *:border-b *:border-[#DBEEFD] text-[#677294] *:transition-colors *:duration-300 select-none">
             <li className="hover:text-main-color">
               <a href="#" className="">
                 Home
               </a>
             </li>
-            <li tabIndex={2} className="group/li min-h-[45px]">
+            <li className="min-h-[45px]">
               <button
                 href="#"
                 className="pl-6 py-3 text-base flex w-full justify-between hover:text-main-color"
                 type="button"
               >
                 <span>Pages</span>
-                <div className=" relative w-10 *:absolute">
-                  <span className="group-focus/li:opacity-0 transition duration-150">
-                    +
-                  </span>
+                <div className=" relative w-10">
                   <span>-</span>
                 </div>
               </button>
-              <ul className="*:pl-6 *:border-t *:border-[#DBEEFD] max-h-0 transition-[max-height] ease-out duration-500 group-focus/li:transition-[max-height] group-focus/li:max-h-screen group-focus/li:ease-in group-focus/li:duration-500 overflow-hidden z-20 *:transition-colors *:duration-300">
+              <ul className="*:pl-6 *:border-t *:border-[#DBEEFD] overflow-hidden z-20 *:transition-colors *:duration-300">
                 <li className="hover:text-main-color">
                   <Link to="/products">Products</Link>
                 </li>

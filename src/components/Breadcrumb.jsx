@@ -2,7 +2,6 @@ import { IoIosArrowForward } from "react-icons/io";
 import { HiOutlineHome } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 const Breadcrumb = ({ mainPage, page }) => {
-  console.log(page);
   return (
     <nav
       className="flex flex-col gap-3 justify-center items-center h-72 bg-[#eff4fa]"

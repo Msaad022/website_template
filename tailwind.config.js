@@ -9,6 +9,8 @@ module.exports = {
       },
       colors: {
         'main-color': '#62bd5e',
+        'star': '#ffb607',
+        'hover-btn': '#1b1b1b',
       },
     },
   },
